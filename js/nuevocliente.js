@@ -1,3 +1,5 @@
+import { mostratAlerta } from './funciones.js';
+
 (function () {
   
   const formulario = document.querySelector('#formulario')
@@ -13,18 +15,14 @@
     
     const cliente = { nombre, email, telefono, empresa };
 
-    if (validarCliente(cliente)) {
-      
+    if (validar(cliente)) {
+      mostratAlerta('Todos los campos son obligatorios.');
       return;
     }
   };
 
-  function validarCliente(obj) {
+  function validar(obj) {
     return !Object.values(obj).every(input => input !== '');
   };
-
-  
-
-
 
 })();
