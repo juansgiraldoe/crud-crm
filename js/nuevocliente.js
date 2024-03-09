@@ -1,4 +1,5 @@
 import { mostratAlerta } from './funciones.js';
+import { nuevoCliente } from "./API.js";
 
 (function () {
   
@@ -19,6 +20,9 @@ import { mostratAlerta } from './funciones.js';
       mostratAlerta('Todos los campos son obligatorios.');
       return;
     }
+
+    nuevoCliente(cliente);
+
   };
 
   function validar(obj) {
